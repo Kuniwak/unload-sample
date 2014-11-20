@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Playground</title>
+  <style>
+    #target {
+      width: 200px;
+      height: 200px;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <script src="//fgnass.github.io/spin.js/spin.min.js"></script>
+  <p>Yes!</p>
+  <form action="/something-heavy-responce" method="POST">
+    <label for="text">Please enter the input:</label>
+    <input id="text" type="text">
+    <input type="submit" value="submit">
+  </form>
+  <div id="target"></div>
+  <script>
+    window.addEventListener('unload', function() {
+      var target = document.getElementById('target');
+      var spinner = new Spinner().spin(target);
+    });
+  </script>
+</body>
+</html>
